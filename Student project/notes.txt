@@ -1,0 +1,21 @@
+routes
+1. /students => list all students
+2. /students/insert
+    - get  => HTML form
+    - post => data -> Mongo
+3. /students/:id
+    - set => student personal page
+4. /students/edit/:id
+    - get => HTML form
+    - put => update data and redirect to /students/:id
+5. /students/delete/:id
+    - delete request
+
+
+Express <-> Mongoose CRUD
+
+HTTP Request
+1. GET(receive data)
+2. POST(send data)
+3. PUT(replace all data) / PATCH(update part data)
+4. DELETE
