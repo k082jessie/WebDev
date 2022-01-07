@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const authRoute = require("./routes/auth-route");
 
 // https://www.w3schools.com/tags/ref_urlencode.ASP
 mongoose
@@ -19,9 +20,10 @@ mongoose
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // already incudes body-parser
+app.use("/auth", authRoute);
 
 app.get("/", (req, res) => {
-  res.send("Hi");
+  res.render("index");
 });
 
 app.listen(8080, () => {
