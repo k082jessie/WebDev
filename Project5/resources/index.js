@@ -7,7 +7,7 @@ const authRoute = require("./routes/auth-route");
 // https://www.w3schools.com/tags/ref_urlencode.ASP
 mongoose
   .connect(
-    "mongodb+srv://k082jessie:F%234961266@cluster0.z8of7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    process.env.CONNECT,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
